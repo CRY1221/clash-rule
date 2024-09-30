@@ -1,0 +1,17 @@
+# 内容：自定义走直连
+# 域名关键字匹配
+DOMAIN-KEYWORD,crynas.top
+DOMAIN-KEYWORD,hdkyl
+DOMAIN-KEYWORD,m-team
+DOMAIN-KEYWORD,ubits
+DOMAIN-KEYWORD,rousi
+DOMAIN-KEYWORD,dajiao
+DOMAIN-KEYWORD,pthome
+DOMAIN-KEYWORD,hdvideo
+DOMAIN-KEYWORD,soulvoice
+DOMAIN-KEYWORD,hdfans
+DOMAIN-KEYWORD,haidan
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,crynas.top
+
