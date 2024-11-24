@@ -16,7 +16,7 @@ DOMAIN-KEYWORD,tracker
 
 
 # 域名后缀匹配
-DOMAIN-SUFFIX,parsec.app
+# DOMAIN-SUFFIX,parsec.app
 
 # 本地/局域网地址
 # 参考：https://en.wikipedia.org/wiki/Reserved_IP_addresses
