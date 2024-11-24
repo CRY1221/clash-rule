@@ -13,11 +13,10 @@ DOMAIN-KEYWORD,soulvoice
 DOMAIN-KEYWORD,hdfans
 DOMAIN-KEYWORD,haidan
 DOMAIN-KEYWORD,tracker
-DOMAIN-KEYWORD,parsec
 
 
 # 域名后缀匹配
-DOMAIN-SUFFIX,crynas.top
+DOMAIN-SUFFIX,parsec.app
 
 # 本地/局域网地址
 # 参考：https://en.wikipedia.org/wiki/Reserved_IP_addresses
