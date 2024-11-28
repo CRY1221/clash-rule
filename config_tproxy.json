@@ -79,7 +79,6 @@
     { "tag": "🛑 广告拦截", "type": "selector", "outbounds": ["REJECT"] },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
     { "tag": "REJECT", "type": "block" },
-    { "tag": "DIRECT", "type": "direct" },
     { "tag": "dns-out", "type": "dns" }
   ],
   
