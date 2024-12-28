@@ -1,25 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "domain_keyword": [
         "m-team",
         "hdkyl",
-        "hdsky",
         "ubits",
         "rousi",
         "dajiao",
         "pthome",
-        "hdvideo",
-        "soulvoice",
+        "tracker",
         "hdfans",
         "haidan",
-        "tracker",
-       
-      ],
-      "domain_suffix": [
-        "crynas.top",
-      
+        "tracker"
       ]
     }
   ]
