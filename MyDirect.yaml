@@ -1,5 +1,7 @@
 payload:
     - DOMAIN-SUFFIX,crynas.top
+    - DOMAIN-KEYWORD,hdsky
+    - DOMAIN-KEYWORD,m-team
     - DOMAIN-KEYWORD,ubits
     - DOMAIN-KEYWORD,rousi
     - DOMAIN-KEYWORD,pthome
@@ -8,5 +10,4 @@ payload:
     - DOMAIN-KEYWORD,hdfans
     - DOMAIN-KEYWORD,haidan
     - DOMAIN-KEYWORD,tracker
-    - DOMAIN-REGEX,\b[a-zA-Z0-9.-]*tracker[a-zA-Z0-9.-]*\.[a-zA-Z]{2,}\b
 
