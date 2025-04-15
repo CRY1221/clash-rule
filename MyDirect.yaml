@@ -1,3 +1,14 @@
-payload:
-    - DOMAIN-SUFFIX,crynas.top
+    payload:
+    - DOMAIN-KEYWORD,crynas.top
+    - DOMAIN-KEYWORD,m-team
+    - DOMAIN-KEYWORD,hdkyl
+    - DOMAIN-KEYWORD,hdsky
     - DOMAIN-KEYWORD,ubits
+    - DOMAIN-KEYWORD,rousi
+    - DOMAIN-KEYWORD,dajiao
+    - DOMAIN-KEYWORD,pthome
+    - DOMAIN-KEYWORD,hdvideo
+    - DOMAIN-KEYWORD,soulvoice
+    - DOMAIN-KEYWORD,hdfans
+    - DOMAIN-KEYWORD,haidan
+    - DOMAIN-KEYWORD,tracker
