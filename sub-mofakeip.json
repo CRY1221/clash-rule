@@ -44,7 +44,7 @@
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn"], "server": "remote-dns"},
       {"action":"route", "rule_set":["google", "youtube", "googledrive"], "server":"Remote-DNS-YT", "strategy": "ipv4_only"},
       {"action":"route", "rule_set":["openai", "claude", "poe", "perplexity", "copilot","spotify"], "server":"Remote-DNS-AI", "strategy": "ipv4_only"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local-dns"},
+      {"rule_set": ["cn-domain", "cn-ip", "private", "privateip", "applications"], "server": "local-dns"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
      ],
     "final": "remote-dns",
@@ -69,7 +69,7 @@
     {"tag": "🍎 苹果服务", "type": "selector", "outbounds": ["🇭🇰 香港自动","🇭🇰 香港手动", "🇯🇵 日本自动", "🇯🇵 日本手动", "🇸🇬 狮城自动", "🇸🇬 狮城手动", "🇺🇲 美国自动", "🇺🇲 美国手动","🐸 手动选择", "♻️ 自动选择"]},
     {"tag": "📲 Telegram", "type": "selector", "outbounds": ["🇭🇰 香港自动","🇭🇰 香港手动", "🇯🇵 日本自动", "🇯🇵 日本手动", "🇸🇬 狮城自动", "🇸🇬 狮城手动", "🇺🇲 美国自动", "🇺🇲 美国手动","🐸 手动选择", "♻️ 自动选择"]},
     {"tag": "🪜 代理域名", "type": "selector", "outbounds": ["🇭🇰 香港自动","🇭🇰 香港手动", "🇯🇵 日本自动", "🇯🇵 日本手动", "🇸🇬 狮城自动", "🇸🇬 狮城手动", "🇺🇲 美国自动", "🇺🇲 美国手动","🐸 手动选择", "♻️ 自动选择"]},
-    {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🐸 手动选择", "♻️ 自动选择", "🎯 全球直连 "]},
+    {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🐸 手动选择", "♻️ 自动选择", "🎯 全球直连"]},
     {"tag": "🇭🇰 香港自动", "type": "urltest", "outbounds": []},
     {"tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": []},
     {"tag": "🇸🇬 狮城自动", "type": "urltest", "outbounds": []},
@@ -80,7 +80,7 @@
     {"tag": "🇺🇲 美国手动", "type": "urltest", "outbounds": []},
     {"tag": "🐸 手动选择", "type": "urltest", "outbounds": []},
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": []},
-    {"tag": "GLOBAL", "type": "selector", "outbounds": ["🐸 手动选择", "♻️ 自动选择", "🎯 全球直连 "]},
+    {"tag": "GLOBAL", "type": "selector", "outbounds": ["🐸 手动选择", "♻️ 自动选择", "🎯 全球直连"]},
     { "tag": "REJECT", "type": "block" },
     { "tag": "🛑 广告拦截", "type": "selector", "outbounds": [ "REJECT" ] },
     { "tag": "🎯 全球直连", "type": "direct" }
