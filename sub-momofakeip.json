@@ -19,7 +19,7 @@
       "server_port": 853,
       "domain_resolver": "hosts"
   },
-  {"tag": "foreign", "type": "tls", "server": "8.8.8.8", "detour": "🚀 默认代理"},
+  {"tag": "foreign", "type": "https", "server": "dns.google", "detour": "🚀 默认代理"，"domain_resolver": "hosts"},
   {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
