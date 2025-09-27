@@ -42,7 +42,6 @@
         {"action":"route", "clash_mode":"global", "server":"Remote-DNS", "strategy": "ipv4_only"}
     ],
     "final": "Remote-DNS",
-    "default_reject_rcode": "NOERROR",
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": true
