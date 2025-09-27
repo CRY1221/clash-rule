@@ -200,7 +200,7 @@
         "fdfe:dcba:9876::1/126"
       ],
       "mtu": 9000,
-      "auto_route": true,
+      "auto_route": false,
       "route_exclude_address_set": ["cn-ip"],
       "route_exclude_address": [
           "10.0.0.0/8",
