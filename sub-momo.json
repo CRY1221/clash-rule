@@ -19,15 +19,17 @@
       "server_port": 853,
       "domain_resolver": "hosts"
   },
-      {"tag": "foreign", "type": "tls", "server": "8.8.8.8", "detour": "🚀 默认代理"}
+  {"tag": "foreign", "type": "tls", "server": "8.8.8.8", "detour": "🚀 默认代理"},
+  {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
       {"ip_accept_any": true, "server": "hosts" },
       {"clash_mode": "direct", "server": "public"},
-      {"clash_mode": "global", "server": "foreign"},
+      {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "public"}
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "public"},
+      {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
      ],
     "final": "foreign",
     "strategy": "ipv4_only",
