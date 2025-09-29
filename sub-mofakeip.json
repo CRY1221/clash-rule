@@ -19,21 +19,7 @@
       "server_port": 853,
       "domain_resolver": "hosts"
   },
-  {
-    "tag": "Remote-DNS-YT",
-    "type": "tls",
-    "server": "8.8.8.8",
-    "server_port": 853,
-    "detour": "📹 YouTube"
-},
-{
-  "tag": "Remote-DNS-AI",
-  "type": "tls",
-  "server": "8.8.8.8",
-  "server_port": 853,
-  "detour": "🤖 AI"
-},
-  {"tag": "remote-dns", "type": "tls", "server": "1.1.1.1", "server_port": 853, "detour": "🚀 默认代理", "domain_resolver": "hosts"},
+  {"tag": "remote-dns", "type": "quic", "server": "dns.google", "server_port": 853, "domain_resolver": "hosts"},
   {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
@@ -42,13 +28,13 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn"], "server": "remote-dns"},
-      {"action":"route", "rule_set":["google", "youtube", "googledrive"], "server":"Remote-DNS-YT", "strategy": "ipv4_only"},
-      {"action":"route", "rule_set":["openai", "claude", "poe", "perplexity", "copilot","spotify"], "server":"Remote-DNS-AI", "strategy": "ipv4_only"},
+      {"action":"route", "rule_set":["google", "youtube", "googledrive"], "server":"Remote-DNS", "strategy": "ipv4_only"},
+      {"action":"route", "rule_set":["openai", "claude", "poe", "perplexity", "copilot","spotify"], "server":"Remote-DNS", "strategy": "ipv4_only"},
       {"rule_set": ["cn-domain", "cn-ip", "private", "privateip", "applications"], "server": "local-dns"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
      ],
     "final": "remote-dns",
-    "strategy": "ipv4_only",
+    "strategy": "prefer_ipv4",
     "independent_cache": true,
     "reverse_mapping": true
   },
@@ -91,7 +77,6 @@
       {"inbound": "dns-in", "action": "hijack-dns"},
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"domain": ["doh.pub", "dns.alidns.com", "dns.google", "cloudflare-dns.com"], "outbound": "🎯 全球直连"},
-
       {"action": "route", "rule_set": [ "ads", "pcdn" ], "outbound": "🛑 广告拦截" },
       {"action": "route", "clash_mode":"direct", "outbound":"🎯 全球直连"},
       {"action": "route", "clash_mode":"global", "outbound":"GLOBAL"},
@@ -158,7 +143,7 @@
       {"tag":"cn-ip", "type":"remote", "format":"binary", "url":"https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cnip.srs", "download_detour":"🎯 全球直连"}
     ],
     "final": "🐠 漏网之鱼",
-    "default_domain_resolver": {"server": "local-dns"}
+    "default_domain_resolver": {"server": "Remote-DNS"}
   },
   "inbounds": [
     {
