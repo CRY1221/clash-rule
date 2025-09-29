@@ -28,8 +28,8 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn"], "server": "remote-dns"},
-      {"action":"route", "rule_set":["google", "youtube", "googledrive"], "server":"Remote-DNS", "strategy": "ipv4_only"},
-      {"action":"route", "rule_set":["openai", "claude", "poe", "perplexity", "copilot","spotify"], "server":"Remote-DNS", "strategy": "ipv4_only"},
+      {"action":"route", "rule_set":["google", "youtube", "googledrive"], "server":"remote-dns", "strategy": "ipv4_only"},
+      {"action":"route", "rule_set":["openai", "claude", "poe", "perplexity", "copilot","spotify"], "server":"remote-dns", "strategy": "ipv4_only"},
       {"rule_set": ["cn-domain", "cn-ip", "private", "privateip", "applications"], "server": "local-dns"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
      ],
@@ -143,7 +143,7 @@
       {"tag":"cn-ip", "type":"remote", "format":"binary", "url":"https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cnip.srs", "download_detour":"🎯 全球直连"}
     ],
     "final": "🐠 漏网之鱼",
-    "default_domain_resolver": {"server": "Remote-DNS"}
+    "default_domain_resolver": {"server": "remote-dns"}
   },
   "inbounds": [
     {
