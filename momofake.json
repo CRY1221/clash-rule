@@ -218,6 +218,12 @@
       "default_mode": "rule"
     }
   },
+  "ntp": {
+    "enabled": true,
+    "server": "cn.ntp.org.cn",
+    "server_port": 123,
+    "interval": "30m"
+  },
   "log": {
     "disabled": false,
     "level": "info",
