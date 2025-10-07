@@ -1,18 +1,83 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "223.5.5.5"},
-      {"tag": "public", "type": "quic", "server": "dns.alidns.com", "domain_resolver": "local"},
-      {"tag": "foreign", "type": "http3", "server": "dns.google", "domain_resolver": "local","detour": "🚀 默认代理"}
+      {
+        "tag": "local",
+        "type": "udp",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "public",
+        "type": "quic",
+        "server": "dns.alidns.com",
+        "domain_resolver": "local"
+      },
+      {
+        "tag": "remote",
+        "type": "h3",
+        "server": "cloudflare-dns.com",
+        "domain_resolver": "local",
+        "detour": "🚀 默认代理"
+      },
+      {
+        "tag": "remote-yt",
+        "type": "h3",
+        "server": "dns.google",
+        "domain_resolver": "local",
+        "detour": "📹 YouTube"
+      },
+      {
+        "tag": "remote-AI",
+        "type": "h3",
+        "server": "cloudflare-dns.com",
+        "domain_resolver": "local",
+        "detour": "🧠 AI"
+      }
     ],
     "rules": [
-      {"clash_mode": "direct", "server": "public"},
-      {"clash_mode": "global", "server": "foreign"},
-      {"query_type": "HTTPS", "action": "reject"},
-      {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "public"}
+      {
+        "clash_mode": "direct",
+        "server": "public"
+      },
+      {
+        "clash_mode": "global",
+        "server": "remote"
+      },
+      {
+        "query_type": "HTTPS",
+        "action": "reject"
+      },
+      {
+        "domain_suffix": [
+          "services.googleapis.cn",
+          "googleapis.cn",
+          "xn--ngstr-lra8j.com"
+        ],
+        "server": "remote"
+      },
+      {
+        "rule_set": [
+          "geosite-cn",
+          "geosite-steamcn",
+          "geosite-apple"
+        ],
+        "server": "public"
+      },
+      {
+        "rule_set": [
+          "geosite-youtube",
+          "geosite-google"
+        ],
+        "server": "remote-yt"
+      },
+      {
+        "rule_set": [
+          "geosite-ai"
+        ],
+        "server": "remote-AI"
+      }
     ],
-    "final": "foreign",
+    "final": "remote",
     "strategy": "prefer_ipv4",
     "disable_cache": false,
     "independent_cache": true,
