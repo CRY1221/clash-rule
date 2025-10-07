@@ -220,7 +220,7 @@
   },
   "ntp": {
     "enabled": true,
-    "server": "cn.ntp.org.cn",
+    "server": "ntp.aliyun.com",
     "server_port": 123,
     "interval": "30m"
   },
