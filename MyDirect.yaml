@@ -1,3 +1,5 @@
 payload:
-    - DOMAIN-KEYWORD,crynas.top
-    - DOMAIN-KEYWORD,cldmind.com
+  - DOMAIN-KEYWORD,crynas.top
+  - DOMAIN-KEYWORD,cldmind.com
+  - DOMAIN-SUFFIX,toshiba-asdf.com
+  - DOMAIN-SUFFIX,micron-asdf.com
